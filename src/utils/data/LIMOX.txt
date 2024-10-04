@@ -1,0 +1,12 @@
+PENDIENTES LIMO
+
+- que va en los  mails y en qué momentos del flujo se envia mail automatizado.
+- preguntas frecuentes para usuario consumidor e imprenta
+- 
+
+
+
+
+- utlima Logica de restablecer contraseña 
+- eliminar usuarios desde Admin
+- 
