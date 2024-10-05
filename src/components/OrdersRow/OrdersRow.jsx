@@ -536,7 +536,7 @@ export default function OrdersRow({
                                         <a
                                           target="_blank"
                                           download
-                                          href={`https://firebasestorage.googleapis.com/v0/b/limo-dev-app.appspot.com/o/${file}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+                                          href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${file}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
                                         >
                                           <VisibilityIcon
                                             className="hover:bg-gray-500 rounded-lg"
@@ -676,7 +676,7 @@ export default function OrdersRow({
                       <span>Teléfono: {clientInfo?.phone}</span>
                       <a
                         className="underline hover:text-green-500 flex items-center p-1 border rounded-md "
-                        href={`https://wa.me/${clientInfo.areaCode}${clientInfo?.phone}?text=Hola, deseo comunicarme con el soporte de LIMO.`}
+                        href={`https://wa.me/${clientInfo.areaCode}${clientInfo?.phone}?text=Hola, deseo comunicarme con el soporte de CIRO.`}
                       >
                         <WhatsAppIcon />
                       </a>

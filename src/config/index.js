@@ -8,13 +8,13 @@ export class Settings {
   static get SERVER_URL() {
     switch (_env) {
       case "LOCAL":
-        return "http://localhost:5001/limo-dev-app/us-central1/api/limo-app";
+        return "http://localhost:5001/ciro-app-prod/us-central1/api/ciro-app";
 
       case "DEV":
-        return "https://us-central1-limo-dev-app.cloudfunctions.net/api/limo-app";
+        return "https://us-central1-ciro-app-prod.cloudfunctions.net/apiCiroV1";
 
       default:
-        return "https://us-central1-limo-dev-app.cloudfunctions.net/api/limo-app";
+        return "https://us-central1-ciro-app-prod.cloudfunctions.net/apiCiroV1";
     }
   }
 

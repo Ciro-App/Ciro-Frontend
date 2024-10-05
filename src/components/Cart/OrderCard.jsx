@@ -177,7 +177,7 @@ export default function OrderCard({
                 <Tooltip placement="top" title="Ver en pantalla completa">
                   <a
                     target="_blank"
-                    href={`https://firebasestorage.googleapis.com/v0/b/limo-dev-app.appspot.com/o/${file}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+                    href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${file}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
                   >
                     <VisibilityIcon
                       className="hover:bg-gray-500 rounded-lg"

@@ -42,7 +42,7 @@ class ViewSDKClient {
         content: {
           /* Location of file where it is hosted */
           location: {
-            url: `https://firebasestorage.googleapis.com/v0/b/limo-dev-app.appspot.com/o/${pdfName}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`,
+            url: `https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${pdfName}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`,
 
             /*
                     If the file URL requires some additional headers, then it can be passed as follows:-

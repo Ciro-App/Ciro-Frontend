@@ -16,8 +16,8 @@ export default defineConfig({
       //   enabled: true,
       // },
       manifest: {
-        name: "Librería Móvil",
-        short_name: "LIMO",
+        name: "CIRO",
+        short_name: "CIRO",
         description: "Fotocopias a domicilio",
         theme_color: "#6a9bea",
         background_color: "#6a9bea",

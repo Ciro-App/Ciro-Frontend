@@ -89,7 +89,7 @@ const PDFViewer = ({
             <Tooltip placement="top" title="Ver en pantalla completa">
               <a
                 target="_blank"
-                href={`https://firebasestorage.googleapis.com/v0/b/limo-dev-app.appspot.com/o/${newFile}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+                href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${newFile}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
               >
                 <VisibilityIcon
                   className="hover:bg-gray-500 rounded-lg"
@@ -109,7 +109,7 @@ const PDFViewer = ({
           <div className="flex items-center justify-center w-full  h-[14em] rounded-lg">
             <div id={newFile} className="hidden"></div>
             <Document
-              file={`https://firebasestorage.googleapis.com/v0/b/limo-dev-app.appspot.com/o/${newFile}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+              file={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${newFile}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
               onLoadSuccess={onDocumentLoadSuccess}
               loading={<Spinner />}
               error={"Error"}
