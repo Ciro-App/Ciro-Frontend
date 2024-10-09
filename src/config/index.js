@@ -61,13 +61,13 @@ export class Settings {
         };
       case "DEV":
         return {
-          clientId: "100f604d477e4654b7a084be20d35317", //  limo ID FOR deploy  (?)
+          clientId: "175a37c322904bfa803952dd4a3bc9bb", //  CIRO ID FOR deploy  (?)
         };
       default:
         return {
           /* Pass your registered client id */
           clientId: "8c0cd670273d451cbc9b351b11d22318", //  DEFAULT ADOBE ID FOR LOCAL (?)
-          // clientId: "100f604d477e4654b7a084be20d35317", //  limo ID FOR deploy  (?)
+          // clientId: "175a37c322904bfa803952dd4a3bc9bb", //  CIRO ID FOR deploy  (?)
         };
     }
   }

@@ -3,6 +3,7 @@ import { Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
 import { pageNavigationPlugin } from "@react-pdf-viewer/page-navigation";
+import { ApiConstants } from "../Common/constants";
 
 export default function PDFRender({ newFile }) {
   const pageNavigationPluginInstance = pageNavigationPlugin();
@@ -42,7 +43,7 @@ export default function PDFRender({ newFile }) {
               // direction: TextDirection.RightToLeft,
             }}
             plugins={[pageNavigationPluginInstance]}
-            fileUrl={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${newFile}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+            fileUrl={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${newFile}?alt=media&token=${ApiConstants.FIREBASE_STORAGE_TOKEN}`}
           />
         </div>
       </div>

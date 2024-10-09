@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { deleteOrderFromCart } from "../../redux/actions";
+import { ApiConstants } from "../../Common/constants";
 
 const style = {
   position: "absolute",
@@ -177,7 +178,7 @@ export default function OrderCard({
                 <Tooltip placement="top" title="Ver en pantalla completa">
                   <a
                     target="_blank"
-                    href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${file}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+                    href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${file}?alt=media&token=${ApiConstants.FIREBASE_STORAGE_TOKEN}`}
                   >
                     <VisibilityIcon
                       className="hover:bg-gray-500 rounded-lg"

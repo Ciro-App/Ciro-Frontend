@@ -12,6 +12,7 @@ import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import { Spinner } from "@react-pdf-viewer/core";
+import { ApiConstants } from "../Common/constants";
 
 const PDFViewer = ({
   newFile,
@@ -20,7 +21,7 @@ const PDFViewer = ({
   setNewFiles,
   newFiles,
   index,
-  setLoading
+  setLoading,
 }) => {
   // const [PDFMetadata, setPDFMetadata] = useState({ numPages: 0, fileSize: 0 });
   const [numPages, setNumPages] = useState();
@@ -31,7 +32,7 @@ const PDFViewer = ({
       ...resume,
       ["totalPages"]: resume.totalPages + PDFMetadata.numPages,
     });
-    setLoading(false)
+    setLoading(false);
   }
 
   // useEffect(() => {
@@ -89,7 +90,7 @@ const PDFViewer = ({
             <Tooltip placement="top" title="Ver en pantalla completa">
               <a
                 target="_blank"
-                href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${newFile}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+                href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${newFile}?alt=media&token=${ApiConstants.FIREBASE_STORAGE_TOKEN}`}
               >
                 <VisibilityIcon
                   className="hover:bg-gray-500 rounded-lg"
@@ -109,7 +110,7 @@ const PDFViewer = ({
           <div className="flex items-center justify-center w-full  h-[14em] rounded-lg">
             <div id={newFile} className="hidden"></div>
             <Document
-              file={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${newFile}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+              file={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${newFile}?alt=media&token=${ApiConstants.FIREBASE_STORAGE_TOKEN}`}
               onLoadSuccess={onDocumentLoadSuccess}
               loading={<Spinner />}
               error={"Error"}

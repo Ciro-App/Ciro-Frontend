@@ -29,6 +29,7 @@ import {
   changeOrderStatus,
   getUserByUid,
 } from "../../redux/actions/adminActions";
+import { ApiConstants } from "../../Common/constants";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -536,7 +537,7 @@ export default function OrdersRow({
                                         <a
                                           target="_blank"
                                           download
-                                          href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${file}?alt=media&token=226633dd-d691-49e7-93e6-bbd5612bae4f`}
+                                          href={`https://firebasestorage.googleapis.com/v0/b/ciro-app-prod.appspot.com/o/${file}?alt=media&token=${ApiConstants.FIREBASE_STORAGE_TOKEN}`}
                                         >
                                           <VisibilityIcon
                                             className="hover:bg-gray-500 rounded-lg"

@@ -2,6 +2,7 @@ import * as action from "../actions/actionTypes";
 import { Settings } from "../../config";
 import axios from "axios";
 import { endSession, getSession, startSession } from "../../utils/controllers";
+import { ApiConstants } from "../../Common/constants";
 
 // import { setAuthToken } from "../../components/BrowserHistory/setAuthToken";
 
@@ -31,7 +32,7 @@ export function limoLogin(user, rememberMe) {
         localStorage.removeItem("loggedUser");
       }
 
-      return console.log("Bienvenido a LIMO!");
+      return console.log("Bienvenido a CIRO!");
     } catch (error) {
       return console.error(error);
     }
@@ -326,10 +327,7 @@ export function deleteAddress(address) {
 export function uploadMulter(file) {
   return async function (dispatch) {
     try {
-      let response = await axios.post(
-        "https://limo-pdf-service-24b7.onrender.com",
-        file
-      );
+      let response = await axios.post(ApiConstants.PDF_CONVERTER_API_URL, file);
 
       let newDocumentsName = response.data;
 

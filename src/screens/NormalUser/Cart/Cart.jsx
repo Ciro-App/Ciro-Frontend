@@ -34,11 +34,12 @@ const baseUrl = Settings.SERVER_URL;
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import Chatbot from "../../../components/Chatbot/Chatbot";
 import { NativeSelect } from "@mui/material";
+import { ApiConstants } from "../../../Common/constants";
 
 /* ------------------------ */
 const steps = ["Detalles", "Resumen", "Pago"];
-const PUBLIC_KEY =
-  "APP_USR-8ae426e8-c6c1-4422-8ccc-44c269e4a73c"; /* PRUEBA usuario test limo vendedor / JUANCHI */
+const PUBLIC_KEY = ApiConstants.MERCADOPAGO_PUBLIC_KEY
+  // "APP_USR-8ae426e8-c6c1-4422-8ccc-44c269e4a73c"; /* PRUEBA usuario test limo vendedor / JUANCHI */
 //  "TEST-89914640-e146-4696-b70c-074e73f1c62a"; // MRG COMPRADOR
 // "TEST-153e2499-54b3-4af0-81f7-2bd5ebe3df6e"; /* PRUEBA usuario test limo vendedor / JX */
 
@@ -190,7 +191,7 @@ export default function Cart() {
     try {
       const response = await axios.post(`${baseUrl}/payment/newpayment`, {
         client_uid: user.uid,
-        title: "Pedido Limo",
+        title: "Orden Ciro",
         quantity: 1,
         place: place,
         details: orderToSend,
@@ -317,11 +318,8 @@ export default function Cart() {
                               </span>
                               <span>Forma de entrega</span>
                             </section>
-                            {/* <button onClick={(e) => handleEditPlace(e)}>
-                              <span className="text-blue-500 underline">
-                                Editar
-                              </span>
-                            </button> */}
+            
+            
                           </section>
                           <section className="flex flex-col gap-5">
                             <div className="flex flex-col gap-1 border border-gray-500 rounded-md p-3">
