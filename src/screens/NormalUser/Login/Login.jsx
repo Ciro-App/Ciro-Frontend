@@ -1,10 +1,8 @@
 import "./Login.css";
 import { React, useState } from "react";
 import { useAuth } from "../../../context/authContext";
-import logoWhite from "../../../utils/assets/images/logo-white.png";
 import logoGoogle from "../../../utils/assets/images/icon-google.png";
-import amico from "../../../utils/assets/images/amico.svg";
-import blueCircle from "../../../utils/assets/images/bg-blue-mobile.svg";
+import loginImage from "../../../utils/assets/images/ciro-login.png";
 import Button from "@mui/material/Button";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
@@ -47,6 +45,7 @@ export default function Login({ loggedUser, dataBaseUser }) {
     try {
       setLoader(true);
       let loginResponse = await loginWithGoogle();
+      console.log(loginResponse);
       const {
         email,
         displayName,
@@ -56,8 +55,9 @@ export default function Login({ loggedUser, dataBaseUser }) {
         phoneNumber = null,
         // reloadUserInfo,
       } = loginResponse.user;
-      let user = loginResponse.user;
 
+      let user = loginResponse.user;
+      console.log(user);
       const { isNewUser } = getAdditionalUserInfo(loginResponse);
 
       if (isNewUser) {
@@ -111,7 +111,7 @@ export default function Login({ loggedUser, dataBaseUser }) {
   }
 
   return (
-    <div className="bg-[#1e1e1e] flex flex-row h-full pb-5">
+    <div className="bg-white flex flex-row h-full pb-5">
       <span className=" text-sm absolute bottom-0 left-0">V 0.9.0</span>
       {/* LOADER */}
       {loader ? (
@@ -128,36 +128,19 @@ export default function Login({ loggedUser, dataBaseUser }) {
 
       <section
         id="svg-container"
-        className="hidden md:hidden lg:flex   h-screen w-1/2  pl-16   "
+        className="hidden md:hidden lg:flex h-screen w-1/2 pl-16"
       >
         {/* BACKGROUND CONTAINER */}
       </section>
 
       {/* ------------------------------------------------------------------------------------------------------------------------------------------ */}
       <section className="w-screen lg:w-1/2 flex flex-col justify-center items-center lg:gap-4 lg:pr-32">
-        <section
-          // id="svg-mobile-container"
-          className="flex flex-col justify-start lg:hidden h-56 w-screen    "
-        >
-          {/* BACKGROUND CONTAINER */}
-          <img
-            src={blueCircle}
-            alt="limo-logo"
-            className="object-contain absolute top-[-5%] w-96  md:hidden"
-          />
-          <span className="absolute left-2 top-2 text-[12px] font-bold md:hidden w-40">
-            Hecho por estudiantes para estudiantes
-          </span>
-          <div className=" absolute w-screen top-12 flex justify-center">
-            <img src={amico} alt="limo-logo" className="object-contain h-36 " />
-          </div>
-        </section>
         <div className="flex flex-col lg:gap-4 gap-2 ">
           <div>
             <section className="flex flex-col items-center justify-center gap-2">
-              <img src={logoWhite} alt="" className="h-12 " />
+              <img src={loginImage} alt="" className="h-56 object-contain " />
 
-              <h1 className="text-3xl ">¡Bienvenido LIMONER!</h1>
+              {/* <h1 className="text-3xl ">¡Bienvenido LIMONER!</h1> */}
               <h2 className="text-lg font-md opacity-60">
                 Para comenzar, ingresa tus datos
               </h2>

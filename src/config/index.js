@@ -8,13 +8,13 @@ export class Settings {
   static get SERVER_URL() {
     switch (_env) {
       case "LOCAL":
-        return "http://localhost:5001/ciro-app-prod/us-central1/api/ciro-app";
+        return "http://localhost:5001/ciro-app-prod/us-central1/apiCiroV1/functions";
 
       case "DEV":
-        return "https://us-central1-ciro-app-prod.cloudfunctions.net/apiCiroV1";
+        return "https://us-central1-ciro-app-prod.cloudfunctions.net/apiCiroV1/functions";
 
       default:
-        return "https://us-central1-ciro-app-prod.cloudfunctions.net/apiCiroV1";
+        return "https://us-central1-ciro-app-prod.cloudfunctions.net/apiCiroV1/functions";
     }
   }
 

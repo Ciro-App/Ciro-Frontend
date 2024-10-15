@@ -72,7 +72,7 @@ export default function PersonalData({ user }) {
   }
 
   return (
-    <div className="flex flex-col bg-[#1e1e1e] rounded-2xl lg:h-2/3 p-6 gap-5">
+    <div className="flex flex-col bg-[#fff] rounded-2xl lg:h-2/3 p-6 gap-5">
       <span className="text-2xl opacity-80">Datos personales</span>
 
       <div className="flex flex-col w-full">
@@ -171,8 +171,8 @@ export default function PersonalData({ user }) {
             name="Femenino"
             className={
               input.gender === "Femenino"
-                ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#94b477] text-sm"
+                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#94b477] text-sm"
             }
             onClick={(e) => handleGender(e)}
           >
@@ -182,8 +182,8 @@ export default function PersonalData({ user }) {
             name="Masculino"
             className={
               input.gender === "Masculino"
-                ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#94b477] text-sm"
+                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#94b477] text-sm"
             }
             onClick={(e) => handleGender(e)}
           >
@@ -193,8 +193,8 @@ export default function PersonalData({ user }) {
             name="No binario"
             className={
               input.gender === "No binario"
-                ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#94b477] text-sm"
+                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#94b477] text-sm"
             }
             onClick={(e) => handleGender(e)}
           >
@@ -204,8 +204,8 @@ export default function PersonalData({ user }) {
             name="Prefiero no decirlo"
             className={
               input.gender === null || input.gender === "Prefiero no decirlo"
-                ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#94b477] text-sm"
+                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#94b477] text-sm"
             }
             onClick={(e) => handleGender(e)}
           >
@@ -255,7 +255,7 @@ const modalStyle = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 300,
-  bgcolor: "#1e1e1e",
+  bgcolor: "#fff",
   // border: "2px solid #000",
   borderRadius: "10px",
   boxShadow: 24,

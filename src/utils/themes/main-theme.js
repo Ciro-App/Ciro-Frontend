@@ -2,9 +2,9 @@ import { createTheme } from "@mui/material";
 
 export const mainTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
     primary: {
-      main: "#4675C0",
+      main: "#458552",
       // light: will be calculated from palette.primary.main,
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
@@ -27,23 +27,21 @@ export const mainTheme = createTheme({
       // dark: "#000000",
       // contrastText: "#fff",
     },
-  
   },
   components: {
     MuiTextField: {
       styleOverrides: {
         root: {
-          fontFamily:""
-         
+          fontFamily: "",
         },
       },
     },
   },
-    typography: {
-      // In Chinese and Japanese the characters are usually larger,
-      // so a smaller fontsize may be appropriate.
-      // fontSize: 12,
-      // fontWeightMedium:""
-      fontFamily:"Poppins"
-    },
+  typography: {
+    // In Chinese and Japanese the characters are usually larger,
+    // so a smaller fontsize may be appropriate.
+    // fontSize: 12,
+    // fontWeightMedium:""
+    fontFamily: "Poppins",
+  },
 });

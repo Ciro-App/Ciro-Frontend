@@ -65,7 +65,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <section className="bg-[#1e1e1e] p-8 h-screen flex flex-col lg:hidden justify-around">
+      <section className="bg-[#fff] p-8 h-screen flex flex-col lg:hidden justify-around">
         {/* DATOS SESION */}
         <div className="flex flex-col justify-center items-center gap-3">
           <Avatar
@@ -93,7 +93,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
               onClick={(e) => setDataRender("personalData")}
               sx={
                 dataRender === "personalData"
-                  ? { backgroundColor: "#272727", borderRadius: "10px" }
+                  ? { backgroundColor: "#81A165", borderRadius: "10px" }
                   : { borderRadius: "10px" }
               }
               className="h-20 m-5"
@@ -107,7 +107,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
               onClick={(e) => setDataRender("accountData")}
               sx={
                 dataRender === "accountData"
-                  ? { backgroundColor: "#272727", borderRadius: "10px" }
+                  ? { backgroundColor: "#81A165", borderRadius: "10px" }
                   : { borderRadius: "10px" }
               }
               className="h-16"
@@ -121,7 +121,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
               onClick={(e) => setDataRender("addressData")}
               sx={
                 dataRender === "addressData"
-                  ? { backgroundColor: "#272727", borderRadius: "10px" }
+                  ? { backgroundColor: "#81A165", borderRadius: "10px" }
                   : { borderRadius: "10px" }
               }
               className="h-16"
@@ -136,7 +136,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
               onClick={(e) => setDataRender("Notifications")}
               sx={
                 dataRender === "Notifications"
-                  ? { backgroundColor: "#272727", borderRadius: "10px" }
+                  ? { backgroundColor: "#81A165", borderRadius: "10px" }
                   : { borderRadius: "10px" }
               }
               className="h-16"
@@ -236,7 +236,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
           </Drawer>
         </span>
         {/* ---MENU EN VISTA PC------- */}
-        <section className="bg-[#1e1e1e] rounded-2xl p-8 hidden lg:w-3/12 lg:flex lg:flex-col justify-around gap-5">
+        <section className="bg-[#fff] rounded-2xl p-8 hidden lg:w-3/12 lg:flex lg:flex-col justify-around gap-5">
           {/* DATOS SESION */}
           <div className="flex flex-col justify-center items-center gap-3">
             <Avatar
@@ -264,7 +264,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 onClick={(e) => setDataRender("personalData")}
                 sx={
                   dataRender === "personalData"
-                    ? { backgroundColor: "#272727", borderRadius: "10px" }
+                    ? { backgroundColor: "#81A165", borderRadius: "10px" }
                     : { borderRadius: "10px" }
                 }
                 className="h-16"
@@ -278,7 +278,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 onClick={(e) => setDataRender("accountData")}
                 sx={
                   dataRender === "accountData"
-                    ? { backgroundColor: "#272727", borderRadius: "10px" }
+                    ? { backgroundColor: "#81A165", borderRadius: "10px" }
                     : { borderRadius: "10px" }
                 }
                 className="h-16"
@@ -292,7 +292,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 onClick={(e) => setDataRender("addressData")}
                 sx={
                   dataRender === "addressData"
-                    ? { backgroundColor: "#272727", borderRadius: "10px" }
+                    ? { backgroundColor: "#81A165", borderRadius: "10px" }
                     : { borderRadius: "10px" }
                 }
                 className="h-16"
@@ -307,7 +307,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 onClick={(e) => setDataRender("Notifications")}
                 sx={
                   dataRender === "Notifications"
-                    ? { backgroundColor: "#272727", borderRadius: "10px" }
+                    ? { backgroundColor: "#81A165", borderRadius: "10px" }
                     : { borderRadius: "10px" }
                 }
                 className="h-16"
@@ -324,7 +324,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
 
           <button
             onClick={(e) => setDataRender("FAQ")}
-            className="hover:bg-[#4b4b4b] self-center flex items-center justify-around rounded-lg p-2 w-fit  border"
+            className="hover:bg-[#81A165] self-center flex items-center justify-around rounded-lg p-2 w-fit  border"
           >
             <div className="flex gap-1">
               <span className="text-sm md:text-[12px] font-[400]">
@@ -371,19 +371,19 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 </a>
               </Tooltip>
             </div>
-            <h4 className="text-sm font-medium self-center">Limo S.A.S®</h4>
+            <h4 className="text-sm font-medium self-center">CIRO®</h4>
           </div>
         </section>
         {/* --------- */}
 
         {/* ALL DATA */}
         <section className="flex flex-col gap-5 justify-center lg:w-9/12 z-10">
-          <div className="flex flex-col gap-5 bg-[#4675C0] rounded-2xl lg:h-1/3 p-5">
+          <div className="flex flex-col gap-5 bg-[#fff] rounded-2xl lg:h-1/3 p-5">
             <div className="flex  justify-between lg:justify-center items-center">
               {/* NUEVO PEDIDO */}
               <div className="flex flex-col w-full lg:w-1/3 gap-6 ">
                 <span className="text-2xl lg:text-3xl w-52">
-                  ¡Hola LIMONER!
+                  ¡Bienvenid@!
                 </span>
                 <Button
                   variant="contained"
@@ -396,11 +396,11 @@ export default function MyAccount({ cart, dataBaseUser }) {
                   onClick={(e) => handleNewOrderButton(e)}
                 >
                   <span className="text-white font-bold">Nuevo pedido</span>
-                  <img
+                  {/* <img
                     src={cuatePedido}
                     alt="limo"
                     className="md:flex h-28 w-28 object-contain"
-                  />
+                  /> */}
                 </Button>
               </div>
               {/* MIS PEDIDOS VISTA PC */}
@@ -429,11 +429,11 @@ export default function MyAccount({ cart, dataBaseUser }) {
               </div>
               {/* CUATE */}
               <div className="hidden lg:w-1/3 md:flex justify-end">
-                <img
+                {/* <img
                   src={cuate}
                   alt="fotocopia"
                   className="w-64 lg:w-48 p-2 object-contain"
-                />
+                /> */}
               </div>
             </div>
             {/* MIS PEDIDOS VISTA MOBILE */}

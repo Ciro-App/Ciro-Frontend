@@ -43,6 +43,8 @@ export const db = getFirestore(app);
 
 export const auth = getAuth(app);
 
+
+
 export const signOutFunction = signOut;
 // export const sendPasswordResetEmailFunction = sendPasswordResetEmail;
 export const resetPassword = async (email, currentPassword, newPassword) => {

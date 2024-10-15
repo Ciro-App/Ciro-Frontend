@@ -24,7 +24,6 @@ import Cart from "./screens/NormalUser/Cart/Cart";
 import Pending from "./components/Mercadopago/Pending";
 import Success from "./components/Mercadopago/Success";
 import Failed from "./components/Mercadopago/Failed";
-
 import Admin from "./screens/Admin/Admin";
 import ResetPassword from "./screens/NormalUser/ResetPassword/ResetPassword";
 import ChangePassword from "./screens/NormalUser/ResetPassword/ChangePassword";

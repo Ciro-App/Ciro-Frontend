@@ -1,4 +1,4 @@
-import "./Login.css";
+import "../Login/Login.css";
 import { React } from "react";
 import { useNavigate } from "react-router-dom";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";

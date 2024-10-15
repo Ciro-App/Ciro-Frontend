@@ -4,6 +4,7 @@ import { useAuth } from "../../../context/authContext";
 import { useNavigate } from "react-router-dom";
 import logoWhite from "../../../utils/assets/images/logo-white.png";
 import logoGoogle from "../../../utils/assets/images/icon-google.png";
+import loginImage from "../../../utils/assets/images/ciro-login.png";
 import amico from "../../../utils/assets/images/amico.svg";
 import blueCircle from "../../../utils/assets/images/bg-blue-mobile.svg";
 import Button from "@mui/material/Button";
@@ -117,7 +118,6 @@ export default function Login() {
           // startSession(user);
           const { isNewUser } = getAdditionalUserInfo(registerResponse);
           const adInfo = getAdditionalUserInfo(registerResponse);
-  
 
           if (isNewUser) {
             dispatch(
@@ -159,10 +159,10 @@ export default function Login() {
   }
 
   return (
-    <div className="bg-[#1e1e1e] flex flex-row h-full pb-5">
+    <div className="flex flex-row h-full pb-5">
       <section
         id="svg-container"
-        className="hidden md:hidden lg:flex   h-screen w-1/2  pl-16   "
+        className="hidden md:hidden lg:flex h-screen w-1/2 pl-16"
       >
         {/* BACKGROUND CONTAINER */}
       </section>
@@ -175,7 +175,7 @@ export default function Login() {
         >
           {/* BACKGROUND CONTAINER */}
           <img
-            src={blueCircle}
+            src={blueCircle} 
             alt="limo-logo"
             className="object-contain absolute top-[-5%] w-96  md:hidden"
           />
@@ -189,9 +189,9 @@ export default function Login() {
         <div className="flex flex-col lg:gap-4 gap-2 ">
           <div>
             <section className="flex flex-col items-center justify-center gap-2">
-              <img src={logoWhite} alt="" className="h-12" />
+            <img src={loginImage} alt="" className="h-56 object-contain " />
 
-              <h1 className="text-3xl">¡Bienvenido a LIMO!</h1>
+              {/* <h1 className="text-3xl">¡Bienvenido a LIMO!</h1> */}
               <h2 className="text-lg font-md opacity-60">
                 Para comenzar, ingresa tus datos
               </h2>
@@ -324,7 +324,7 @@ export default function Login() {
                   <span className="font-extralight mx-2 ">
                     Acepto los{" "}
                     <Link to="/terminosycondiciones">
-                      <span className="text-blue-500 font-medium hover:underline">
+                      <span className="text-green-700 font-medium hover:underline">
                         Términos y condiciones.
                       </span>
                     </Link>
@@ -360,7 +360,7 @@ export default function Login() {
           <div className="flex flex-col items-center justify-center">
             <Typography>
               ¿Ya tienes una cuenta?{" "}
-              <Link to="/login" underline="none" className="text-blue-500">
+              <Link to="/login" underline="none" className="text-green-700">
                 Ingresar
               </Link>
             </Typography>
