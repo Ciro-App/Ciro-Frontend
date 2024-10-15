@@ -30,7 +30,7 @@ export default function ToastAlert() {
   return (
     <div>
       <Snackbar
-        sx={{ backgroundColor: "#1e1e1e", borderRadius: "4px" }}
+        sx={{ backgroundColor: "#81A165", borderRadius: "4px" }}
         open={open}
         autoHideDuration={3000}
         onClose={handleClose}
@@ -38,6 +38,7 @@ export default function ToastAlert() {
         anchorOrigin={{ vertical, horizontal }}
         message={message}
         key={vertical + horizontal}
+        className="drop-shadow-2xl"
       >
         <section className="flex gap-4 justify-between items-center p-4 rounded-[55px] drop-shadow-2xl">
           {state.variant === "success" ? (
@@ -51,7 +52,7 @@ export default function ToastAlert() {
           ) : (
             false
           )}
-          <span className="text-[14px]">{state.message}</span>
+          <span className="text-[14px] text-white">{state.message}</span>
           <IconButton
             size="small"
             aria-label="close"

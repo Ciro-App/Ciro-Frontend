@@ -164,19 +164,7 @@ export default function Admin({ cart, dataBaseUser }) {
             </ListItemButton> */}
           </List>
         </div>
-        {/* <button
-          onClick={(e) => setDataRender("FAQ")}
-          className="bg-[#4675C0]  flex items-center justify-between rounded-2xl h-24 p-5"
-        >
-          {" "}
-          <div className="flex flex-col">
-            <span className="text-[12px] font-[400]">¿Tenés dudas?</span>
-            <span className="text-[16px] font-[600]"> Hace click acá</span>
-          </div>
-          <div className="flex justify-end">
-            <img src={contactCuate} alt="" className="h-20" />
-          </div>
-        </button> */}
+
       </section>
     </Box>
   );
@@ -299,24 +287,7 @@ export default function Admin({ cart, dataBaseUser }) {
             </List>
           </div>
 
-          {/* <button
-            onClick={(e) => setDataRender("FAQ")}
-            className="bg-[#4675C0] flex items-center justify-around rounded-2xl h-24 p-5"
-          >
-            {" "}
-            <div className="flex flex-col">
-              <span className="text-sm md:text-[12px] font-[400]">
-                ¿Tenés dudas?
-              </span>
-              <span className="text-sm md:text-[16px] font-[600]">
-                {" "}
-                Hace click acá
-              </span>
-            </div>
-            <div className="flex justify-end">
-              <img src={contactCuate} alt="" className="h-20" />
-            </div>
-          </button> */}
+ 
         </section>
         {/* --------- */}
 

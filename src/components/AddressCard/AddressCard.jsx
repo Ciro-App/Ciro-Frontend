@@ -118,16 +118,16 @@ export default function AddressCard({ address, user }) {
       <Box
         component="span"
         sx={{ p: 1, borderRadius: "25px", padding: "1em" }}
-        className="h-40 w-44 md:w-56 md:h-56 lg:h-56 lg:w-56 flex flex-col items-center justify-center  bg-[#1e1e1e]"
+        className="h-40 w-44 md:w-56 md:h-56 lg:h-56 lg:w-56 flex flex-col items-center justify-center  bg-[#fff]"
       >
-        <div className="relative flex flex-col items-center justify-center w-full h-full  ">
+        <div className="relative flex flex-col items-center justify-center w-full h-full   text-black">
           <div className="absolute top-0 right-0 flex gap-2">
             <Tooltip title="Editar" placement="top" arrow>
               <EditIcon
                 onClick={handleClickOpenEditModal}
                 color="action"
                 sx={{ height: "1em", width: "1em" }}
-                className="hover:bg-[#4675C0] rounded-lg"
+                className="hover:bg-[#c9d9bb] rounded-lg"
               />
             </Tooltip>
             <Tooltip title="Eliminar" placement="top" arrow>
@@ -135,11 +135,12 @@ export default function AddressCard({ address, user }) {
                 onClick={handleClickOpenDeleteModal}
                 color="action"
                 sx={{ height: "1em", width: "1em" }}
-                className="hover:bg-[#4675C0] rounded-lg"
+                className="hover:bg-[#c9d9bb] rounded-lg"
               />
             </Tooltip>
           </div>
-          <div className="absolute bottom-0 flex flex-col justify-start gap-3 w-full items-start text-white">
+          
+          <div className="absolute bottom-0 flex flex-col justify-start gap-3 w-full items-start text-black">
             <PlaceIcon
               color="primary"
               sx={{ height: "1.3em", width: "1.3em" }}
@@ -307,8 +308,8 @@ export default function AddressCard({ address, user }) {
                 name="Casa"
                 className={
                   input.tag === "Casa"
-                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#c9d9bb] text-sm"
+                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#c9d9bb] text-sm"
                 }
                 onClick={(e) => handleTag(e)}
               >
@@ -318,8 +319,8 @@ export default function AddressCard({ address, user }) {
                 name="Oficina"
                 className={
                   input.tag === null || input.tag === "Oficina"
-                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#c9d9bb] text-sm"
+                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#c9d9bb] text-sm"
                 }
                 onClick={(e) => handleTag(e)}
               >
@@ -329,8 +330,8 @@ export default function AddressCard({ address, user }) {
                 name="Trabajo"
                 className={
                   input.tag === "Trabajo"
-                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#c9d9bb] text-sm"
+                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#c9d9bb] text-sm"
                 }
                 onClick={(e) => handleTag(e)}
               >
@@ -340,8 +341,8 @@ export default function AddressCard({ address, user }) {
                 name="Universidad"
                 className={
                   input.tag === "Universidad"
-                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#c9d9bb] text-sm"
+                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#c9d9bb] text-sm"
                 }
                 onClick={(e) => handleTag(e)}
               >
@@ -351,8 +352,8 @@ export default function AddressCard({ address, user }) {
                 name="Escuela"
                 className={
                   input.tag === "Escuela"
-                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#c9d9bb] text-sm"
+                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#c9d9bb] text-sm"
                 }
                 onClick={(e) => handleTag(e)}
               >
@@ -367,8 +368,8 @@ export default function AddressCard({ address, user }) {
                     input.tag !== "Casa" &&
                     input.tag !== "Universidad" &&
                     input.tag !== "Trabajo")
-                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#4675C0] text-sm"
-                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#4675C0] text-sm"
+                    ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#c9d9bb] text-sm"
+                    : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#c9d9bb] text-sm"
                 }
                 onClick={(e) => handleOtherTag(e)}
               >

@@ -134,7 +134,7 @@ export default function PersonalData({ user }) {
             defaultValue={user.birthdate}
             type="date"
             onChange={(e) => handleInput(e)}
-            className= {error.birthdate ?"bg-transparent border-b border-red-500 pt-1" :"bg-transparent border-b pt-1"}
+            className= {error.birthdate ?"bg-transparent border-b border-red-500 pt-1" :"bg-transparent border-b border-gray-400 pt-1"}
           />
           {error.birthdate ? (
             <span className="text-[12px] text-red-500 font-bold">
@@ -172,7 +172,7 @@ export default function PersonalData({ user }) {
             className={
               input.gender === "Femenino"
                 ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#94b477] text-sm"
-                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#94b477] text-sm"
+                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-[#94b477]/50 hover:bg-[#94b477] text-sm"
             }
             onClick={(e) => handleGender(e)}
           >
@@ -183,7 +183,7 @@ export default function PersonalData({ user }) {
             className={
               input.gender === "Masculino"
                 ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#94b477] text-sm"
-                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#94b477] text-sm"
+                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-[#94b477]/50 hover:bg-[#94b477] text-sm"
             }
             onClick={(e) => handleGender(e)}
           >
@@ -194,7 +194,7 @@ export default function PersonalData({ user }) {
             className={
               input.gender === "No binario"
                 ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#94b477] text-sm"
-                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#94b477] text-sm"
+                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-[#94b477]/50 hover:bg-[#94b477] text-sm"
             }
             onClick={(e) => handleGender(e)}
           >
@@ -205,7 +205,7 @@ export default function PersonalData({ user }) {
             className={
               input.gender === null || input.gender === "Prefiero no decirlo"
                 ? "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1 bg-[#94b477] text-sm"
-                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-gray-600 hover:bg-[#94b477] text-sm"
+                : "rounded-full w-fit h-8 px-2 lg:w-30 lg:px-4 lg:py-1  bg-[#94b477]/50 hover:bg-[#94b477] text-sm"
             }
             onClick={(e) => handleGender(e)}
           >

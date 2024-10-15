@@ -35,7 +35,7 @@ export default function ChoosePlaceModal({ choosePlace, setChoosePlace }) {
         aria-describedby="parent-modal-description"
         className=" flex items-center justify-center"
       >
-        <Box className="bg-[#1e1e1e] rounded-lg w-10/12 md:w-1/2 lg:w-1/3">
+        <Box className="bg-[#fff] rounded-lg w-10/12 md:w-1/2 lg:w-1/3">
           <section className=" p-4 ">
             <h2
               id="parent-modal-title"
@@ -48,8 +48,8 @@ export default function ChoosePlaceModal({ choosePlace, setChoosePlace }) {
             <button
               className={
                 resume?.place?.type === "Envío a domicilio"
-                  ? "flex flex-col gap-5 items-center w-1/2 justify-center p-4  border border-[#4675C0] bg-[#4675C0]/20 rounded-lg"
-                  : "flex flex-col gap-5 items-center w-1/2 justify-center p-4  bg-[#121212] rounded-lg"
+                  ? "flex flex-col gap-5 items-center w-1/2 justify-center p-4  border border-[#000] bg-[#81A165] rounded-lg"
+                  : "flex flex-col gap-5 items-center w-1/2 justify-center p-4  bg-[#81A165]/50 rounded-lg hover:bg-[#81A165]"
               }
               onClick={(e) =>
                 setResume({
@@ -65,8 +65,8 @@ export default function ChoosePlaceModal({ choosePlace, setChoosePlace }) {
               disabled
               className={
                 resume?.place?.type === "Retiro"
-                  ? "cursor-no-drop flex flex-col gap-5 items-center w-1/2 justify-center p-4  border border-[#4675C0] bg-[#4675C0]/20 rounded-lg"
-                  : "cursor-no-drop flex flex-col gap-5 items-center w-1/2 justify-center p-4  bg-[#121212] rounded-lg"
+                  ? "cursor-no-drop flex flex-col gap-5 items-center w-1/2 justify-center p-4  border border-[#000] bg-[#81A165]/20 rounded-lg"
+                  : "cursor-no-drop flex flex-col gap-5 items-center w-1/2 justify-center p-4  bg-[#81A165]/20 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -92,8 +92,8 @@ export default function ChoosePlaceModal({ choosePlace, setChoosePlace }) {
                         key={index}
                         className={
                           resume.place.address === address
-                            ? " p-2 rounded-md  bg-[#4675C0]/20 border border-[#4675C0] hover:bg-gray-600 "
-                            : " p-2 rounded-md border border-gray-400 hover:bg-gray-600 "
+                            ? " p-2 rounded-md  bg-[#81A165] border border-[#000] hover:bg-[#81A165] "
+                            : " p-2 rounded-md border border-gray-400 hover:bg-[#81A165] bg-[#81A165]/60 "
                         }
                         onClick={(e) =>
                           setResume({

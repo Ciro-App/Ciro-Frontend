@@ -10,7 +10,7 @@ import Avatar from "@mui/material/Avatar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "../../utils/assets/images/logo-white.png";
+import logo from "../../utils/assets/images/ciro-login.png";
 import { logout } from "../../redux/actions";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -40,10 +40,10 @@ export default function Navbar({ loggedUser, title }) {
     <AppBar
       position="sticky"
       sx={{ zIndex: "40" }}
-      color="black"
+      color="white"
       enableColorOnDark
     >
-      <Container maxWidth="screen" sx={{ backgroundColor: "#000" }}>
+      <Container maxWidth="screen" sx={{ backgroundColor: "#fff" }}>
         <Toolbar disableGutters>
           <Link to="/">
             <img src={logo} alt="" className="h-10  hidden md:hidden lg:flex" />
@@ -71,7 +71,7 @@ export default function Navbar({ loggedUser, title }) {
                 display: "flex",
                 alignItems: "center",
                 gap: "1em",
-                ":hover": { backgroundColor: "#393939" },
+                ":hover": { backgroundColor: "#81A165 " },
               }}
             >
               <IconButton
@@ -83,7 +83,7 @@ export default function Navbar({ loggedUser, title }) {
                 }}
               >
                 <Avatar
-                  alt="Limo profile"
+                  alt="Ciro profile"
                   sx={{ height: "2rem", width: "2rem" }}
                   src={loggedUser?.photoURL}
                 />
@@ -115,35 +115,55 @@ export default function Navbar({ loggedUser, title }) {
               </Typography>
               <Typography textAlign="center">{loggedUser?.email}</Typography>
               {loggedUser?.roles?.includes("admin") && (
-                <MenuItem key={"Admin"} onClick={() => navigate("/admin")}>
+                <MenuItem
+                  sx={{ ":hover": { backgroundColor: "#c9d9bb" } }}
+                  key={"Admin"}
+                  onClick={() => navigate("/admin")}
+                >
                   <Typography textAlign="center">
                     Vista de administrador
                   </Typography>
                 </MenuItem>
               )}
               {loggedUser?.roles?.includes("printing") && (
-                <MenuItem key={"Admin"} onClick={() => navigate("/imprenta")}>
+                <MenuItem
+                  sx={{ ":hover": { backgroundColor: "#c9d9bb" } }}
+                  key={"Admin"}
+                  onClick={() => navigate("/imprenta")}
+                >
                   <Typography textAlign="center">Vista de imprenta</Typography>
                 </MenuItem>
               )}
               {loggedUser?.roles?.includes("delivery") && (
-                <MenuItem key={"Admin"} onClick={() => navigate("/delivery")}>
+                <MenuItem
+                  sx={{ ":hover": { backgroundColor: "#c9d9bb" } }}
+                  key={"Admin"}
+                  onClick={() => navigate("/delivery")}
+                >
                   <Typography textAlign="center">Vista de delivery</Typography>
                 </MenuItem>
               )}
 
-              <MenuItem key={"Mi cuenta"} onClick={() => navigate("/")}>
+              <MenuItem
+                sx={{ ":hover": { backgroundColor: "#c9d9bb" } }}
+                key={"Mi cuenta"}
+                onClick={() => navigate("/")}
+              >
                 <Typography textAlign="center">Mi cuenta</Typography>
               </MenuItem>
-              <MenuItem key={"logout"} onClick={(e) => handleLogout(e)}>
+              <MenuItem
+                sx={{ ":hover": { backgroundColor: "#c9d9bb" } }}
+                key={"logout"}
+                onClick={(e) => handleLogout(e)}
+              >
                 <Typography textAlign="center">Cerrar sesión</Typography>
               </MenuItem>
             </div>
           </Menu>
-          {/* {loggedUser?.cartInfo?.cartStatus && cart?.length ? ( */}
+
           {cart?.length ? (
             <Link to="/carrito">
-              <button className="flex gap-2 items-center bg-[#373737]  px-4 py-1 rounded-2xl ml-3 hover:bg-[#4675C0]">
+              <button className="flex gap-2 items-center bg-[#fff]  px-4 py-1 rounded-2xl ml-3 hover:bg-[#84A165]">
                 <ShoppingCartIcon sx={{ height: "0.8em", width: "0.8em" }} />{" "}
                 {cart?.length}
               </button>

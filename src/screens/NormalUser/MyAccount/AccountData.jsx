@@ -79,7 +79,7 @@ export default function AccountData({ user }) {
   }
 
   return (
-    <div className="flex flex-col bg-[#1e1e1e] rounded-2xl lg:h-2/3 p-6 gap-4">
+    <div className="flex flex-col bg-[#fff] rounded-2xl lg:h-2/3 p-6 gap-4">
       <span className="text-3xl opacity-80">Datos de la cuenta</span>
 
       <div className="flex gap-8">

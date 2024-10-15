@@ -33,17 +33,17 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
   };
 
   return (
-    <div className="bg-[#1e1e1e] relative h-full w-full p-4 flex flex-col gap-4 rounded-xl ">
+    <div className="bg-[#fff] relative h-full w-full p-4 flex flex-col gap-4 rounded-xl text-white">
       <NewOrderSettingsHelpDesktop
         helpModal={helpModalDesktop}
         setHelpModal={setHelpModalDesktop}
         currentSetting={currentSetting}
       />
-      <span className="text-xl">Personalización</span>
+      <span className="text-xl text-black">Personalización</span>
       <div className="flex flex-col gap-3">
         <section className="flex  flex-col gap-2 items-start justify-start">
           <div className="flex gap-2 items-center">
-            <span className="">Cantidad de copias</span>
+            <span className="text-black">Cantidad de copias</span>
             <HelpIcon
               color="primary"
               className="hover:opacity-50"
@@ -53,7 +53,7 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
           </div>
           <div className="flex gap-2 items-center">
             <button
-              className="h-8 w-8 bg-[#121212] rounded-lg"
+              className="h-8 w-8 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg hover:bg-[#61774d] hover:bg-[#61774d]/80/80"
               onClick={(e) =>
                 setResume({
                   ...resume,
@@ -64,11 +64,11 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             >
               <span className="text-2xl ">{"<"}</span>
             </button>
-            <div className="h-8 w-12 bg-[#121212] rounded-md flex items-center justify-center">
+            <div className="h-8 w-12 bg-[#61774d] hover:bg-[#61774d]/80 rounded-md flex items-center justify-center">
               <span>{resume.numberOfCopies}</span>
             </div>
             <button
-              className="h-8 w-8 bg-[#121212] rounded-lg"
+              className="h-8 w-8 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg hover:bg-[#61774d]"
               onClick={(e) => toast100handle(e)}
             >
               <span className="text-2xl ">{">"}</span>
@@ -77,7 +77,7 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
         </section>
         <section className="flex  flex-col gap-2 items-start justify-start">
           <div className="flex gap-2 items-center">
-            <span className="">Color de copias</span>
+            <span className="text-black">Color de copias</span>
 
             <HelpIcon
               color="primary"
@@ -90,8 +90,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.color === "BN"
-                  ? "flex flex-col items-center w-24 justify-center px-1  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-1  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -107,8 +107,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.color === "Color"
-                  ? "flex flex-col items-center w-24 justify-center px-1  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-1  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -124,7 +124,7 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
         </section>
         <section className="flex  flex-col gap-2 items-start justify-start">
           <div className="flex gap-2 items-center">
-            <span className="">Tamaño de copias</span>
+            <span className="text-black">Tamaño de copias</span>
 
             <HelpIcon
               color="primary"
@@ -137,8 +137,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.size === "A4"
-                  ? "flex flex-col items-center w-24 justify-center px-1  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-1  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -154,8 +154,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             {/* <button
               className={
                 resume.size === "A3"
-                  ? "flex flex-col items-center w-24 justify-center px-1  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-1  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -170,8 +170,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.size === "Oficio"
-                  ? "flex flex-col items-center w-24 justify-center px-1  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-1  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-1  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -187,7 +187,7 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
         </section>
         <section className="flex  flex-col gap-2 items-start justify-start">
           <div className="flex gap-2 items-center">
-            <span className="">Forma de impresión</span>
+            <span className="text-black">Forma de impresión</span>
             <HelpIcon
               color="primary"
               className="hover:opacity-50"
@@ -199,8 +199,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.printWay === "Simple faz"
-                  ? "flex flex-col items-center w-24 justify-center px-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -216,8 +216,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.printWay === "Doble faz"
-                  ? "flex flex-col items-center w-24 justify-center px-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -233,7 +233,7 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
         </section>
         <section className="flex  flex-col gap-2 items-start justify-start">
           <div className="flex gap-2 items-center">
-            <span className="">Copias por carilla</span>
+            <span className="text-black">Copias por carilla</span>
             <HelpIcon
               color="primary"
               className="hover:opacity-50"
@@ -245,8 +245,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.copiesPerPage === "Normal"
-                  ? "flex flex-col items-center w-24 justify-center px-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -262,8 +262,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.copiesPerPage === "2 copias"
-                  ? "flex flex-col items-center w-24 justify-center px-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -279,8 +279,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.copiesPerPage === "4 copias"
-                  ? "flex flex-col items-center w-24 justify-center px-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -297,7 +297,7 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
         </section>
         <section className="flex  flex-col gap-2 items-start justify-start">
           <div className="flex gap-2 items-center">
-            <span className="">Orientación</span>
+            <span className="text-black">Orientación</span>
             <HelpIcon
               color="primary"
               className="hover:opacity-50"
@@ -311,8 +311,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
                 disabled
                 className={
                   resume.orientacion === "Vertical"
-                    ? "flex flex-col items-center w-24 justify-center px-2  py-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                    : "flex flex-col items-center w-24 justify-center px-2  py-2  bg-[#313131] rounded-lg"
+                    ? "flex flex-col items-center w-24 justify-center px-2  py-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                    : "flex flex-col items-center w-24 justify-center px-2  py-2  bg-[#61774d]/70 rounded-lg"
                 }
                 // onClick={(e) =>
                 //   setResume({
@@ -327,8 +327,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
               <button
                 className={
                   resume.orientacion === "Vertical"
-                    ? "flex flex-col items-center w-24 justify-center px-2  py-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                    : "flex flex-col items-center w-24 justify-center px-2  py-2  bg-[#121212] rounded-lg"
+                    ? "flex flex-col items-center w-24 justify-center px-2  py-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                    : "flex flex-col items-center w-24 justify-center px-2  py-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
                 }
                 onClick={(e) =>
                   setResume({
@@ -343,8 +343,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.orientacion === "Horizontal"
-                  ? "flex flex-col items-center w-24 justify-center px-2  py-2 border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-2  py-2  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-2  py-2 border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-2  py-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -359,7 +359,7 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
         </section>
         <section className="flex  flex-col gap-2 items-start justify-start">
           <div className="flex gap-2 items-center">
-            <span className="">Anillado</span>
+            <span className="text-black">Anillado</span>
             <HelpIcon
               color="primary"
               className="hover:opacity-50"
@@ -371,8 +371,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             <button
               className={
                 resume.finishing === "Sin anillado"
-                  ? "flex flex-col items-center w-24 justify-center px-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#121212] rounded-lg"
+                  ? "flex flex-col items-center w-24 justify-center px-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                  : "flex flex-col items-center w-24 justify-center px-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
               }
               onClick={(e) =>
                 setResume({
@@ -388,8 +388,8 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
               <button
                 className={
                   resume.finishing === "Anillado"
-                    ? "flex flex-col items-center w-24 justify-center px-2  border border-[#4675C0] bg-[#121212] rounded-lg"
-                    : "flex flex-col items-center w-24 justify-center px-2  bg-[#121212] rounded-lg"
+                    ? "flex flex-col items-center w-24 justify-center px-2  border-[#000] border-2 bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
+                    : "flex flex-col items-center w-24 justify-center px-2  bg-[#61774d] hover:bg-[#61774d]/80 rounded-lg"
                 }
                 onClick={(e) =>
                   setResume({
@@ -404,7 +404,7 @@ export default function NewOrderSettingsDesktop({ resume, setResume }) {
             ) : (
               <button
                 disabled
-                className="flex flex-col items-center w-24 justify-center px-2  bg-[#313131] rounded-lg"
+                className="flex flex-col items-center w-24 justify-center px-2  bg-[#61774d]/70 rounded-lg"
               >
                 <span className="text-[12px] ">Anillado</span>
                 <span className="text-[10px] opacity-70 ">Lado largo</span>

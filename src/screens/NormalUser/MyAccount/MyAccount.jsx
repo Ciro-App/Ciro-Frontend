@@ -60,7 +60,11 @@ export default function MyAccount({ cart, dataBaseUser }) {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: "80vw", borderRadius: "10px" }}
+      sx={{
+        width: "80vw",
+        borderRadius: "10px",
+        ":hover": { backgroundColor: "#c9d9bb" },
+      }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -93,8 +97,15 @@ export default function MyAccount({ cart, dataBaseUser }) {
               onClick={(e) => setDataRender("personalData")}
               sx={
                 dataRender === "personalData"
-                  ? { backgroundColor: "#81A165", borderRadius: "10px" }
-                  : { borderRadius: "10px" }
+                  ? {
+                      backgroundColor: "#81A165",
+                      borderRadius: "10px",
+                      ":hover": { backgroundColor: "#c9d9bb" },
+                    }
+                  : {
+                      borderRadius: "10px",
+                      ":hover": { backgroundColor: "#c9d9bb" },
+                    }
               }
               className="h-20 m-5"
             >
@@ -107,10 +118,17 @@ export default function MyAccount({ cart, dataBaseUser }) {
               onClick={(e) => setDataRender("accountData")}
               sx={
                 dataRender === "accountData"
-                  ? { backgroundColor: "#81A165", borderRadius: "10px" }
-                  : { borderRadius: "10px" }
+                  ? {
+                      backgroundColor: "#81A165",
+                      borderRadius: "10px",
+                      ":hover": { backgroundColor: "#c9d9bb" },
+                    }
+                  : {
+                      borderRadius: "10px",
+                      ":hover": { backgroundColor: "#c9d9bb" },
+                    }
               }
-              className="h-16"
+              className="h-16 "
             >
               <ListItemIcon>
                 <ContactMailIcon sx={{ width: "2.5rem", height: "2.5rem" }} />
@@ -121,10 +139,17 @@ export default function MyAccount({ cart, dataBaseUser }) {
               onClick={(e) => setDataRender("addressData")}
               sx={
                 dataRender === "addressData"
-                  ? { backgroundColor: "#81A165", borderRadius: "10px" }
-                  : { borderRadius: "10px" }
+                  ? {
+                      backgroundColor: "#81A165",
+                      borderRadius: "10px",
+                      ":hover": { backgroundColor: "#c9d9bb" },
+                    }
+                  : {
+                      borderRadius: "10px",
+                      ":hover": { backgroundColor: "#c9d9bb" },
+                    }
               }
-              className="h-16"
+              className="h-16 "
             >
               <ListItemIcon>
                 <LocationOnIcon sx={{ width: "2.5rem", height: "2.5rem" }} />
@@ -136,10 +161,17 @@ export default function MyAccount({ cart, dataBaseUser }) {
               onClick={(e) => setDataRender("Notifications")}
               sx={
                 dataRender === "Notifications"
-                  ? { backgroundColor: "#81A165", borderRadius: "10px" }
-                  : { borderRadius: "10px" }
+                  ? {
+                      backgroundColor: "#81A165",
+                      borderRadius: "10px",
+                      ":hover": { backgroundColor: "#c9d9bb" },
+                    }
+                  : {
+                      borderRadius: "10px",
+                      ":hover": { backgroundColor: "#c9d9bb" },
+                    }
               }
-              className="h-16"
+              className="h-16 "
             >
               <ListItemIcon>
                 <NotificationsIcon sx={{ width: "2.5rem", height: "2.5rem" }} />
@@ -150,7 +182,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
         </div>
         <button
           onClick={(e) => setDataRender("FAQ")}
-          className="hover:bg-[#4b4b4b] self-center flex items-center justify-around rounded-lg p-2 w-fit  border"
+          className="hover:bg-[#81A165] self-center flex items-center justify-around rounded-lg p-2 w-fit  border border-gray-300"
         >
           <div className="flex gap-1">
             <span className="text-sm md:text-[12px] font-[400]">
@@ -264,10 +296,17 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 onClick={(e) => setDataRender("personalData")}
                 sx={
                   dataRender === "personalData"
-                    ? { backgroundColor: "#81A165", borderRadius: "10px" }
-                    : { borderRadius: "10px" }
+                    ? {
+                        backgroundColor: "#81A165",
+                        borderRadius: "10px",
+                        ":hover": { backgroundColor: "#c9d9bb" },
+                      }
+                    : {
+                        borderRadius: "10px",
+                        ":hover": { backgroundColor: "#c9d9bb" },
+                      }
                 }
-                className="h-16"
+                className="h-16 "
               >
                 <ListItemIcon>
                   <PersonIcon sx={{ width: "2.5rem", height: "2.5rem" }} />
@@ -278,10 +317,17 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 onClick={(e) => setDataRender("accountData")}
                 sx={
                   dataRender === "accountData"
-                    ? { backgroundColor: "#81A165", borderRadius: "10px" }
-                    : { borderRadius: "10px" }
+                    ? {
+                        backgroundColor: "#81A165",
+                        borderRadius: "10px",
+                        ":hover": { backgroundColor: "#c9d9bb" },
+                      }
+                    : {
+                        borderRadius: "10px",
+                        ":hover": { backgroundColor: "#c9d9bb" },
+                      }
                 }
-                className="h-16"
+                className="h-16 "
               >
                 <ListItemIcon>
                   <ContactMailIcon sx={{ width: "2.5rem", height: "2.5rem" }} />
@@ -292,10 +338,17 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 onClick={(e) => setDataRender("addressData")}
                 sx={
                   dataRender === "addressData"
-                    ? { backgroundColor: "#81A165", borderRadius: "10px" }
-                    : { borderRadius: "10px" }
+                    ? {
+                        backgroundColor: "#81A165",
+                        borderRadius: "10px",
+                        ":hover": { backgroundColor: "#c9d9bb" },
+                      }
+                    : {
+                        borderRadius: "10px",
+                        ":hover": { backgroundColor: "#c9d9bb" },
+                      }
                 }
-                className="h-16"
+                className="h-16 "
               >
                 <ListItemIcon>
                   <LocationOnIcon sx={{ width: "2.5rem", height: "2.5rem" }} />
@@ -307,10 +360,17 @@ export default function MyAccount({ cart, dataBaseUser }) {
                 onClick={(e) => setDataRender("Notifications")}
                 sx={
                   dataRender === "Notifications"
-                    ? { backgroundColor: "#81A165", borderRadius: "10px" }
-                    : { borderRadius: "10px" }
+                    ? {
+                        backgroundColor: "#81A165",
+                        borderRadius: "10px",
+                        ":hover": { backgroundColor: "#c9d9bb" },
+                      }
+                    : {
+                        borderRadius: "10px",
+                        ":hover": { backgroundColor: "#c9d9bb" },
+                      }
                 }
-                className="h-16"
+                className="h-16 "
               >
                 <ListItemIcon>
                   <NotificationsIcon
@@ -324,7 +384,7 @@ export default function MyAccount({ cart, dataBaseUser }) {
 
           <button
             onClick={(e) => setDataRender("FAQ")}
-            className="hover:bg-[#81A165] self-center flex items-center justify-around rounded-lg p-2 w-fit  border"
+            className="hover:bg-[#81A165] self-center flex items-center justify-around rounded-lg p-2 w-fit  border border-gray-300"
           >
             <div className="flex gap-1">
               <span className="text-sm md:text-[12px] font-[400]">
@@ -382,17 +442,18 @@ export default function MyAccount({ cart, dataBaseUser }) {
             <div className="flex  justify-between lg:justify-center items-center">
               {/* NUEVO PEDIDO */}
               <div className="flex flex-col w-full lg:w-1/3 gap-6 ">
-                <span className="text-2xl lg:text-3xl w-52">
-                  ¡Bienvenid@!
-                </span>
+                <span className="text-2xl lg:text-3xl w-52">¡Bienvenid@!</span>
                 <Button
                   variant="contained"
-                  className="flex flex-col-reverse md:flex-row justify-between w-full  lg:w-fit lg:h-24"
+                  className="flex flex-col-reverse md:flex-row justify-between w-full lg:w-full lg:p-4 lg:h-24"
                   sx={{
                     border: "1px solid white",
                     text: "white",
-                    borderRadius: "20px",
+                    borderRadius: "10px",
+                    ":hover": { backgroundColor: "#c9d9bb" },
                   }}
+                  
+                  color="primary"
                   onClick={(e) => handleNewOrderButton(e)}
                 >
                   <span className="text-white font-bold">Nuevo pedido</span>

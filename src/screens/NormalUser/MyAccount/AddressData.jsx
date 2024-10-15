@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import {
   Autocomplete,
   Backdrop,
@@ -7,7 +7,6 @@ import {
   CircularProgress,
   Input,
   TextField,
-
 } from "@mui/material";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import Dialog from "@mui/material/Dialog";
@@ -151,15 +150,18 @@ export default function AddressData({ user }) {
       {/* NEW ADDRESS BUTTON */}
       <Box
         component="span"
-        sx={{ p: 1, border: "1px dashed #4675C0", borderRadius: "25px" }}
+        sx={{ p: 1, border: "1px dashed white", borderRadius: "25px" }}
         className="h-40 w-44 md:w-56 md:h-56 lg:h-56 lg:w-56  flex items-center justify-center"
       >
         <Button
           onClick={handleClickOpen}
           className="flex-col-2 items-center justify-center gap-2 w-full h-full "
         >
-          <AddCircleIcon sx={{ height: "1em", width: "1em" }} />
-          <span className="text-[0.8em] ">Agregar dirección</span>
+          <AddCircleIcon
+            sx={{ height: "1em", width: "1em" }}
+            className="text-white"
+          />
+          <span className="text-[0.8em] text-white">Agregar dirección</span>
         </Button>
       </Box>
 
@@ -182,7 +184,7 @@ export default function AddressData({ user }) {
                 error={error.name}
                 name="name"
                 // defaultValue={user.displayName}
-                inputProps={{ maxLength:50 }}
+                inputProps={{ maxLength: 50 }}
                 placeholder="Calle ejemplo"
                 onChange={(e) => handleInput(e)}
               />

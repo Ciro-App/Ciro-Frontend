@@ -42,7 +42,7 @@ export default function Notifications({ user }) {
   return (
     <div className="flex flex-col rounded-2xl lg:h-2/3 p-1 gap-5">
       <span className="text-2xl"> Permitir notificaciones</span>
-      <section className="flex justify-between items-center rounded-2xl p-5 bg-[#1e1e1e]">
+      <section className="flex justify-between items-center rounded-2xl p-5 bg-[#fff]">
         <div className="flex flex-col">
           <span className="text-xl">Mail</span>
         </div>
@@ -52,7 +52,7 @@ export default function Notifications({ user }) {
           checked={notifications.mailNotifications}
         />
       </section>
-      <section className="flex justify-between items-center rounded-2xl p-5 bg-[#1e1e1e]">
+      <section className="flex justify-between items-center rounded-2xl p-5 bg-[#fff]">
         <div className="flex flex-col">
           <span className="text-xl">Whatsapp</span>
         </div>

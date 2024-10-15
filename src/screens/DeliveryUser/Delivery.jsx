@@ -42,7 +42,7 @@ export default function Delivery({ cart, dataBaseUser }) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <section className="bg-[#1e1e1e] p-8 h-screen flex flex-col lg:hidden justify-around">
+      <section className="bg-[#fff] p-8 h-screen flex flex-col lg:hidden justify-around">
         {/* DATOS SESION */}
         <div className="flex flex-col justify-center items-center gap-3">
           <Avatar
@@ -111,7 +111,7 @@ export default function Delivery({ cart, dataBaseUser }) {
           </Drawer>
         </span>
         {/* ---MENU EN VISTA PC------- */}
-        <section className="bg-[#1e1e1e] rounded-2xl p-8 hidden lg:w-3/12 lg:flex lg:flex-col justify-around gap-5">
+        <section className="bg-[#fff] rounded-2xl p-8 hidden lg:w-3/12 lg:flex lg:flex-col justify-around gap-5">
           {/* DATOS SESION */}
           <div className="flex flex-col justify-center items-center gap-3">
             <Avatar
@@ -152,29 +152,12 @@ export default function Delivery({ cart, dataBaseUser }) {
             </List>
           </div>
 
-          {/* <button
-            onClick={(e) => setDataRender("FAQ")}
-            className="bg-[#4675C0] flex items-center justify-around rounded-2xl h-24 p-5"
-          >
-            {" "}
-            <div className="flex flex-col">
-              <span className="text-sm md:text-[12px] font-[400]">
-                ¿Tenés dudas?
-              </span>
-              <span className="text-sm md:text-[16px] font-[600]">
-                {" "}
-                Hace click acá
-              </span>
-            </div>
-            <div className="flex justify-end">
-              <img src={contactCuate} alt="" className="h-20" />
-            </div>
-          </button> */}
+ 
         </section>
         {/* --------- */}
 
         {/* ALL DATA */}
-        <section className="bg-[#1e1e1e] rounded-2xl flex flex-col gap-5 justify-center lg:w-9/12 z-10  overflow-auto">
+        <section className="bg-[#fff] rounded-2xl flex flex-col gap-5 justify-center lg:w-9/12 z-10  overflow-auto">
           {dataRender === "orders" ? (
             <Orders editor={"deliveryUser"} />
           ) : (
